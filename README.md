@@ -1,5 +1,7 @@
 # Easyfix
 
+[![Build Status](https://travis-ci.org/mbrukman/easyfix.svg?branch=master)](https://travis-ci.org/mbrukman/easyfix)
+
 Easyfix is a tool for making easy fixes to text files, enabling simple
 large-scale cleanups of your code, documentation, or any other files.
 

@@ -16,7 +16,7 @@
 # schedule it for deletion upon program exit.
 
 # Create temp directory.
-readonly TMPDIR="$(mktemp -d /tmp/confkeyvaliterator.XXXXXX)"
+readonly TMPDIR="$(mktemp -d /tmp/easyfix.XXXXXX)"
 
 # Register cleanup on exit to remove directory.
 trap "rm -rf ${TMPDIR}" EXIT SIGINT SIGTERM

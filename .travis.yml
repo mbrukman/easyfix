@@ -12,10 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+dist: bionic
+sudo: false
+
 language: generic
+
+os:
+  - linux
+  - osx
 
 branches:
   only:
     - master
+
+matrix:
+  allow_failures:
+    - os: osx
+
+  fast_finish: true
 
 script: make test

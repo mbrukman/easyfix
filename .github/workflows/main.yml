@@ -1,4 +1,4 @@
-# Copyright 2018 Google LLC
+# Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,23 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-dist: bionic
-sudo: false
+name: "Build & test"
 
-language: generic
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-os:
-  - linux
-  - osx
+jobs:
+  run-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ 'ubuntu-20.04', 'macos-10.15' ]
+    name: ${{ matrix.os }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
-branches:
-  only:
-    - master
-
-matrix:
-  allow_failures:
-    - os: osx
-
-  fast_finish: true
-
-script: make test
+      - name: Run tests
+        run: make test VERBOSE=1

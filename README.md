@@ -1,9 +1,9 @@
 # Easyfix
 
-[![Build Status][github-ci-badge]][github-ci-url]
+[![Easyfix build Status][easyfix-ci-badge]][easyfix-ci-url]
 
-[github-ci-badge]: https://github.com/mbrukman/easyfix/actions/workflows/main.yml/badge.svg
-[github-ci-url]: https://github.com/mbrukman/easyfix/actions/workflows/main.yml
+[easyfix-ci-badge]: https://github.com/mbrukman/easyfix/actions/workflows/main.yml/badge.svg?query=branch%3Amain
+[easyfix-ci-url]: https://github.com/mbrukman/easyfix/actions/workflows/main.yml?query=branch%3Amain
 
 Easyfix is a tool for making easy fixes to text files, enabling simple
 large-scale cleanups of your code, documentation, or any other files.

@@ -40,7 +40,7 @@ jobs:
     name: ${{ matrix.os }}
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run tests
         run: make test VERBOSE=1

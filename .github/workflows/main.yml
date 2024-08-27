@@ -24,8 +24,9 @@ jobs:
   run-tests:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [ 'ubuntu-20.04', 'macos-10.15' ]
+        os: [ 'ubuntu-24.04', 'ubuntu-22.04', 'macos-14', 'macos-13', 'macos-12' ]
     name: ${{ matrix.os }}
     steps:
       - name: Checkout repo
